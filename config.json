@@ -1,0 +1,51 @@
+{
+  "exporter": {
+    " name": "Maharath Exim",
+    "address": "GN/1004, Ganga Apartment, Sector-4, Gomti Nagar Extension, Lucknow, Uttar Pradesh- 226010, India",
+    "sender_name": "Amit Singh",
+    "sender_title": "Business Owner",
+    "reply_email": "amit@maharathexim.com",
+    "products": ["Brassware", "Blue pottery", "Home decor", "Cotton handicraft items", "Handmade paper", "Tote bags", "Wooden handicrafts"],
+    "_hs_codes_NOTE": "SUGGESTED codes only -- VERIFY with your CHA/DGFT before using on any document.",
+    "hs_codes": {
+      "Brassware": "7418 / 8306",
+      "Blue pottery / ceramics": "6913 / 6912",
+      "Wooden handicrafts": "4420",
+      "Handmade paper": "4802 / 4823",
+      "Cotton handicraft / textiles": "6304 / 6307",
+      "Tote bags": "4202 / 6305",
+      "Home decor (mixed)": "9403 / 9505 / 6913"
+    }
+  },
+  "icp": {
+    "target_markets": ["United States", "USA", "United Kingdom", "UK", "Germany", "France", "Spain", "Italy", "Netherlands", "Belgium", "Austria", "Switzerland", "Portugal", "Ireland", "Sweden", "Denmark", "Norway", "Finland", "Poland", "Czechia", "Greece", "Hungary", "Romania", "Canada", "Mexico", "United Arab Emirates", "UAE", "Saudi Arabia", "Qatar", "Kuwait", "Bahrain", "Oman", "Jordan", "Israel", "Turkey", "Brazil", "Argentina", "Colombia", "Chile", "Peru", "Uruguay", "South Africa", "Nigeria", "Kenya", "Egypt", "Morocco", "Japan", "Singapore", "Malaysia", "Thailand", "Indonesia", "South Korea", "Vietnam", "Philippines", "Australia", "New Zealand"],
+    "buyer_type_keywords": ["distribut", "wholesale", "retail", "import", "importa", "gift", "decor", "deco", "home", "homeware", "houseware", "handicraft", "handcraft", "craft", "artisan", "artesan", "interior", "furnish", "furniture", "bazaar", "emporium", "gallery", "galerie", "trading", "trade", "souvenir", "lifestyle", "mayorista", "regalos", "hogar", "decoracion", "comercial", "muebles", "kunsthandwerk", "kunstgewerbe", "handwerk", "handel", "grosshandel", "einzelhandel", "kunst", "mode", "geschenk", "dekoration", "einrichtung", "wohnen", "moebel", "basar", "artisanat", "cadeau", "maison", "importateur", "grossiste", "mobilier"],
+    "min_fit_score_to_keep": 0
+  },
+  "scoring": {
+    "weights": {"target_market": 35, "buyer_type_match": 30, "has_email": 20, "named_contact": 10, "has_website": 5}
+  },
+  "provider": {
+    "provider": "mock",
+    "_options": "mock = deterministic zero-token (default). groq = free API key. ollama = local model.",
+    "groq": {"api_key_env": "GROQ_API_KEY", "model": "llama-3.3-70b-versatile", "base_url": "https://api.groq.com/openai/v1/chat/completions"},
+    "ollama": {"model": "llama3.1", "host": "http://localhost:11434"}
+  },
+  "batch_size": 200,
+  "enrichment": {
+    "scrape_website": true,
+    "check_mx": true,
+    "request_timeout": 8,
+    "max_candidates": 8,
+    "role_prefixes": ["info", "contact", "contacto", "kontakt", "ventas", "sales", "comercial", "export", "exports", "compras", "purchasing", "hello", "hola", "atencion", "office", "buero"],
+    "paid_provider": "none",
+    "_paid_options": "none | hunter. 'hunter' uses HUNTER_API_KEY and only runs for rows the free steps could not resolve.",
+    "hunter": {"api_key_env": "HUNTER_API_KEY"}
+  },
+  "compliance": {
+    "eu_countries": ["Germany", "France", "Spain", "Italy", "Netherlands", "Belgium", "Austria", "Poland", "Sweden", "Ireland", "Portugal", "Denmark", "Finland", "Greece", "Czechia", "Romania", "Hungary"],
+    "require_optout_line": true,
+    "block_consumer_email_domains": ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "icloud.com"],
+    "note": "Personal-domain emails are flagged (GDPR), not auto-blocked. Review before sending."
+  }
+}

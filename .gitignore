@@ -1,0 +1,34 @@
+# Environment variables — never commit secrets
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.egg
+
+# Runtime cache / output (regenerated on each run)
+cache/
+qualified_leads.csv
+
+# Data files — may contain PII; commit samples only if intentional
+data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
